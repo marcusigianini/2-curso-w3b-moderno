@@ -1,0 +1,10 @@
+function somarMultiplicar(a,b){
+  return function (c){
+    return (a+b)*c
+  }
+}
+
+console.log(somarMultiplicar(2,3)(4)) 
+//somarMultiplicar(2,3) retorna outra função, que necessita de mais um parâmetro, por isso adiciona (4)
+//isso retorna no final de tudo (2+3)*4 = 20
+//console.log(20)
