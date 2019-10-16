@@ -1,0 +1,13 @@
+function somar(){
+  let soma = 0
+  for(i in arguments){
+    soma += arguments[i]
+  } 
+  return soma
+} // array arguments possui os parâmetros dinâmicos passados para a função
+
+console.log(somar()) //retorna 0 já que não entra no for in
+console.log(somar(2)) // retorna 2 pois é o único elemento de arguments
+console.log(somar(2.1,5.3,1.45)) //retorna a soma de tudo
+
+console.log(somar('a','b','c')) //retorna concatenação, pois número + char + char + char -> string
