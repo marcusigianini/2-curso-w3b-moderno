@@ -1,0 +1,11 @@
+function somar(a,b,c){
+  a = a||0
+  b = b||0
+  c = c||0
+  console.log(a+b+c)
+} //caso parâmetro possa ser convertido em false booleano, ativa o parâmetro padrão 0
+
+somar() //undefined ativa parâmetro padrão -> retorna 0
+somar(5,null,4) //null ativa parâmetro padrão -> retorna 9
+
+somar(0,0,0) //0 ativa parâmetro, mas é inútil -> retorna 0
