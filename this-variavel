@@ -1,0 +1,8 @@
+let pessoa = {nome:'Marcus',
+              falarNome(){console.log(this.nome)}
+} //falarNome é um método que, aqui, aponta para o objeto pessoa ao referenciar 'this', pois é o contexto que está inserido, e pede o atributo 'nome'
+
+pessoa.falarNome() //Marcus -> funcionamento normal ao chamar a função dentro do objeto
+
+let falar = pessoa.falarNome //'falar' recebe a função de dentro do objeto
+falar() //undefined -> o 'this' referencia o objeto global, que não possui atributo 'nome', por isso retorna undefined
