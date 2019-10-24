@@ -1,0 +1,14 @@
+let pessoa = {nome:'Marcus',
+              falarNome(){console.log(this.nome)}
+} //falarNome é um método que, aqui, aponta para o objeto pessoa ao referenciar 'this', pois é o contexto que está inserido, e pede o atributo 'nome'
+
+pessoa.falarNome() //Marcus -> funcionamento normal ao chamar a função dentro do objeto
+
+let falar = pessoa.falarNome //'falar' recebe a função de dentro do objeto
+falar() //undefined -> o 'this' referencia o objeto global, que não possui atributo 'nome', por isso retorna undefined
+
+let falarNome = pessoa.falarNome.bind(pessoa) //'falarNome', variável de escopo geral, recebe a função de dentro do objeto, que é bindada/acorrentada ao próprio objeto
+
+//Isso significa que independente de como é chamada, essa função falarNome() vai possuir sempre o this apontando para o objeto 'pessoa'
+
+falarNome() //Marcus -> this aponta para objeto/contexto 'pessoa', que possui atributo 'nome', independente de sua função estar sendo chamada em um objeto global 
