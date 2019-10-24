@@ -1,0 +1,13 @@
+function somar(a,b){
+  a = a !== undefined ? a : 0 //ativa 0 caso a não tenha sido definido
+  b = isNaN(b) ? 0 : b //ativa 0 caso b não seja um número
+  return a+b
+}
+
+console.log(somar()) //0, pois a ñ é definido e b ñ é número
+console.log(somar(1)) //1, pois b ñ é número
+console.log(somar(null,1)) //1, pois null+1 = 1
+console.log(somar(2,2)) //4, pois a é definido e b é número
+
+console.log(somar('a',2)) //a2 -> falha do parâmetro padrão de a, pois deixa um método de soma somar letras e números
+console.log(somar(2,'a')) //2 -> mostra como parâmetro padrão de b é melhor nesse caso, pois só considera números
