@@ -1,0 +1,13 @@
+function pessoa(){
+
+  this.idade = 0 //this = contexto que for chamada
+
+  setInterval(function(){ //setInterval (faz algo,tempo) -> laço de repetição
+    this.idade++ //this = contexto do setInterval
+    console.log(this.idade) //mesmo this que o de cima
+  }/*.bind(this)*/,1000)
+}
+
+new pessoa //instância da função em objeto para disparar métodos
+           //NaN sem usar bind, pois o this aponta para setInterval, que não possui o número idade
+           //1,2,3... usando bind, pois o método bind acorrenta a função ao contexto maior, representado por this==primeiro this
