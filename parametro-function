@@ -1,0 +1,12 @@
+function somar (x,y){
+  return x+y
+}
+
+let imprimir = function(x,y,operacao = somar){
+  console.log(operacao(x,y))
+} //operação padrão de somar, senão recebe uma função que receberá o x e y como parâmetro depois
+
+imprimir(5,4) //9 -> padrão de somar
+imprimir(5,4,somar) //9 -> versão explícita do caso acima
+imprimir(4,8,function(x,y){return x*y}) //32 -> parâmetro é função anônima
+imprimir(4,8,(x,y) => x/y) //0.5 -> parâmetro é arrow function
