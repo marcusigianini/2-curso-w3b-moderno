@@ -1,0 +1,18 @@
+function Pessoa(name, age, occupation){
+  this.nome = name
+  this.idade = age
+  this.cargo = occupation
+
+  this.falarNome = () => console.log('Meu nome é: '+this.nome)
+} //função construtora possui 3 atributos e 1 método
+
+let marcus = new Pessoa('Marcus',17,'Programador') //função construtora instanciada em objeto, com valores
+//objeto marcus possui 4 pares chave/valor definidos
+
+console.log(marcus.idade) //17 -> valor 17 é acessado a partir da chave idade
+marcus.falarNome() //Meu nome é: Marcus -> função falarNome() roda a partir da chave que é ela mesma
+
+let {nome,idade,cargo,falarNome} = marcus //objeto marcus é desestruturado, com seus pares sendo declarados fora dele, no escopo padrão
+
+console.log(idade) //idade agora é acessável assim, pois não está dentro do objeto
+falarNome()// falarNome() é acessável assim pelo mesmo motivo
