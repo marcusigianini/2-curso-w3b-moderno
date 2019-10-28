@@ -1,0 +1,14 @@
+let array = ['Marcus','João','Victor']
+
+function imprimir(nome,indice){
+  console.log(`${indice+1}.${nome}`)
+} 
+
+array.forEach(imprimir) //a função forEach() é uma função que percorre e aplica uma função a cada elemento do array, função que por sua vez recebe até três parâmetros na ordem: 
+/*1. valor do elemento*/
+/*2. índice do elemento*/
+/*3. array inteiro a que pertence o elemento*/
+
+array.forEach(function imprimirNome(x){console.log(x)}) //passando função tradicional como parâmetro
+
+array.forEach((x) => console.log(x)) //versão arrow function do exemplo acima
