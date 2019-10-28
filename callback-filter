@@ -1,0 +1,14 @@
+let array = [7.1, 6.5, 9.7, 4.5, 8.9]
+
+let notasBoas = array.filter(x => x>=7)
+let notasRuins = array.filter(x => x<7)
+//a função filter() percorre cada elemento do array e aplica uma função callback a ele, função essa que por sua vez recebe até 3 parâmetros em ordem:
+/*1. valor do elemento*/
+/*2. índice do elemento*/
+/*3. array inteiro a que pertence o elemento*/
+//dependendo do retorno da função callback, é criado um sub-array filtrado que deve ser adicionado em uma variável:
+/*Caso true, passa pelo filtro*/
+/*Caso false, é barrado pelo filtro*/
+
+console.log(notasBoas) //maiores ou iguais a 7
+console.log(notasRuins) //menores que 7
